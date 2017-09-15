@@ -65,7 +65,7 @@ public class Modulo {
             pass = true;
         }
         if(!pass){
-            validaCoor(w, Tipo);
+            cooR = "xx";
         }
         return cooR;       
     }
@@ -91,12 +91,16 @@ public class Modulo {
             switch(t){
                 case 1:
                     x.inserirSubmarino(coordenada, false);
+                     break;
                 case 2:
                     x.inserirContratorpedeiros(coordenada, false);
+                     break;
                 case 3:
                     x.inserirNaviosTanque(coordenada, false);
+                     break;
                 case 4:
                     x.inserirPortaAvioes(coordenada, false);
+                     break;
                 default:
                     break;
             }                
@@ -104,12 +108,16 @@ public class Modulo {
             switch(t){
                 case 1:
                     x.inserirSubmarino(coordenada, true);
+                     break;
                 case 2:
                     x.inserirContratorpedeiros(coordenada, true);
+                     break;
                 case 3:
                     x.inserirNaviosTanque(coordenada, true);
+                     break;
                 case 4:
                     x.inserirPortaAvioes(coordenada, true);
+                     break;
                 default:
                     break;               
             }                

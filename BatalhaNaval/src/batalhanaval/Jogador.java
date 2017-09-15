@@ -24,10 +24,10 @@ public class Jogador {
     }
     /**Inserindo os Objetos.*/
     void inserirSubmarino(String cooR, boolean H){
-        int x,y;        
-        x = Integer.parseInt(cooR.substring(0, 1));
-        y = Integer.parseInt(cooR.substring(1, 2));
-        try{
+        int x,y;
+        try{        
+            x = Integer.parseInt(cooR.substring(0, 1));
+            y = Integer.parseInt(cooR.substring(1, 2));        
             if (H == false){
                 tbl[x][y] = 2;
                 tbl[x+1][y] = 2;
@@ -41,9 +41,10 @@ public class Jogador {
     }
     void inserirContratorpedeiros(String cooR, boolean H){
         int x,y;        
-        x = Integer.parseInt(cooR.substring(0, 1));
-        y = Integer.parseInt(cooR.substring(1, 2));
         try {
+            x = Integer.parseInt(cooR.substring(0, 1));
+            y = Integer.parseInt(cooR.substring(1, 2));
+        
             if (H == false){            
                 tbl[x][y] = 3;
                 tbl[x+1][y] = 3;
@@ -59,10 +60,9 @@ public class Jogador {
     }
     void inserirNaviosTanque(String cooR, boolean H){
         int x,y;
-        x = Integer.parseInt(cooR.substring(0, 1));
-        y = Integer.parseInt(cooR.substring(1, 2));
-        
-        try {            
+          try {  
+            x = Integer.parseInt(cooR.substring(0, 1));
+            y = Integer.parseInt(cooR.substring(1, 2));                      
             if(H == false){
                 tbl[x][y] = 4;
                 tbl[x+1][y] = 4;
@@ -80,9 +80,10 @@ public class Jogador {
     }
     void inserirPortaAvioes(String cooR, boolean H){
         int x,y;
-        x = Integer.parseInt(cooR.substring(0, 1));
-        y = Integer.parseInt(cooR.substring(1, 2));
-        try {
+        try {    
+            x = Integer.parseInt(cooR.substring(0, 1));
+            y = Integer.parseInt(cooR.substring(1, 2));
+        
             if(H==false){
                 tbl[x][y] = 5;
                 tbl[x+1][y] = 5;
