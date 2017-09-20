@@ -98,7 +98,7 @@ public class Pessoa {
     int CalcularMaiorIdade(Pessoa vPessoa[]){
     //Calcular a > idade
     short maiorIdade = 0 ;
-        for (int i = 0; i < vPessoa.length; i++) {
+        for (int i = 0; i < vPessoa.length -1; i++) {
             if (vPessoa[i].idade > maiorIdade){
                 maiorIdade = vPessoa[i].idade;
             }
@@ -106,19 +106,20 @@ public class Pessoa {
     return maiorIdade;
     }
     
-    int CalcularPorcentagemdeGatas(Pessoa vPessoa[]){
+    float CalcularPorcentagemdeGatas(Pessoa vPessoa[]){
     //Calcular a % de mulheres com 35>idade>18 
     // Com olhos verdes e cabelos loiros
     float porcentegem ;
     int gatas = 0;
-       for  (Pessoa pessoa : vPessoa) {
-            if (pessoa.idade > 18 && pessoa.idade < 35 ){
-                if (pessoa.getcC()==cordosCabelos.louros && pessoa.getcO()==cordosOlhos.verdes && pessoa.sexo==true) {
+    
+    for (int i = 0; i < vPessoa.length -1; i++) {
+            if (vPessoa[i].idade > 18 && vPessoa[i].idade < 35 ){
+                if (vPessoa[i].getcC()==cordosCabelos.louros && vPessoa[i].getcO()==cordosOlhos.verdes && vPessoa[i].sexo==true) {
                     gatas = gatas + 1;
                 }
             }
-        }
-       porcentegem = (100/(vPessoa.length))*gatas;
+        }   
+    porcentegem = (100/(vPessoa.length -1))*gatas;
     return porcentegem;
     }
     
